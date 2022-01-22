@@ -1,0 +1,11 @@
+﻿@using WebAppAspNetMvcAutofac.DataModel;
+@model Order
+
+<h3>Услуга</h3>
+
+@using (Html.BeginForm("Create", "Orders", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Сохранить" class="btn btn-success"/>
+    @Html.ActionLink("Отменить", "Index", "Orders", new { @class = "btn btn-warning" })
+}

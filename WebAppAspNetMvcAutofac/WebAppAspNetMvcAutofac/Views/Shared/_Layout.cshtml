@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Госуслуги</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <div class="container">
+
+            <nav class="navbar-expand-md navbar-light">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li>
+                        <a href="/Clients" class="nav-link bg-info">Клиенты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Orders" class="nav-link bg-warning">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ClientTypes" class="nav-link bg-danger">Типы клиентов</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Citizenships" class="nav-link bg-success">Гражданства</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/AvailableDocuments" class="nav-link bg-primary">Список документов</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

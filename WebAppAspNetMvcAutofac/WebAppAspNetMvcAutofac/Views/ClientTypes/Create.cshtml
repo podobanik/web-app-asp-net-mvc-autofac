@@ -1,0 +1,9 @@
+﻿@using WebAppAspNetMvcAutofac.DataModel;
+@model ClientType
+
+@using (Html.BeginForm("Create", "ClientTypes", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Сохранить" class="btn btn-success"/>
+    @Html.ActionLink("Отменить", "Index", "ClientTypes", new { @class = "btn btn-warning" })
+}

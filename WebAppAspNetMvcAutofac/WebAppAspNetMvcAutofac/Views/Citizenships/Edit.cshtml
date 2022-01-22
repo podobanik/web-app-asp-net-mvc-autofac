@@ -1,0 +1,12 @@
+﻿@using WebAppAspNetMvcAutofac.DataModel;
+@model Citizenship
+
+<h3>Гражданство</h3>
+
+@using (Html.BeginForm("Edit", "Citizenships", FormMethod.Post))
+{
+    @Html.ValidationSummary();
+    @Html.EditorForModel()
+    <input type="submit" value="Сохранить" class="btn btn-success"/>
+    @Html.ActionLink("Отменить", "Index", "Citizenships", new { @class = "btn btn-warning" })
+}

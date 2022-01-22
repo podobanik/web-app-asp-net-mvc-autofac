@@ -1,0 +1,11 @@
+﻿@using WebAppAspNetMvcAutofac.DataModel;
+@model AvailableDocument
+
+<h3>Добавление документа</h3>
+
+@using (Html.BeginForm("Create", "AvailableDocuments", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Сохранить" class="btn btn-success"/>
+    @Html.ActionLink("Отменить", "Index", "AvailableDocuments", new { @class = "btn btn-warning" })
+}
